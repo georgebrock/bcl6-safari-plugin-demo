@@ -16,6 +16,20 @@
 
 - (void)_new_webView:(id)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(id)frame decisionListener:(id)listener
 {
+	NSLog(@"%@", actionInformation);
+	
+	if([[actionInformation valueForKey:@"WebActionNavigationTypeKey"] intValue] == 0) // WebNavigationTypeLinkClicked
+	{
+		NSAlert *confirm = [NSAlert alertWithMessageText:@"Are you really, really sure?" 
+										   defaultButton:@"Yes"
+										 alternateButton:@"No"
+											 otherButton:nil
+							   informativeTextWithFormat:@""];
+		
+		if([confirm runModal] == NSAlertAlternateReturn)
+			return;
+	}
+	
 	[self _original_webView:sender decidePolicyForNavigationAction:actionInformation request:request frame:frame decisionListener:listener];
 }
 
