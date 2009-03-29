@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		C6229B550F7F5AF2002A07E6 /* BCL6Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		32DBCF630370AF2F00C91783 /* BCL6Demo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCL6Demo_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* BCL6Demo.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCL6Demo.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6229B530F7F5AF2002A07E6 /* BCL6Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCL6Demo.h; sourceTree = "<group>"; };
+		C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCL6Demo.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +45,8 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
+				C6229B530F7F5AF2002A07E6 /* BCL6Demo.h */,
+				C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */,
 			);
 			name = BCL6Demo;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6229B550F7F5AF2002A07E6 /* BCL6Demo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
