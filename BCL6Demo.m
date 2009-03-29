@@ -13,6 +13,22 @@
 
 +(void)load
 {
+	NSBundle *hostApp = [NSBundle mainBundle];
+	
+	// Check the host app is Safari
+	NSString *bundleID = [hostApp bundleIdentifier];
+	if(![bundleID isEqualToString:@"com.apple.Safari"])
+		return;
+	
+	// Check this version of Safari is supported
+	NSDictionary *infoDict = [hostApp infoDictionary];
+	float v = [[infoDict valueForKey:@"CFBundleVersion"] floatValue];
+	if(v != 5528.16)
+	{
+		//TODO: Tell the user why the plugin hasn't loaded (this version of Safari isn't supported)
+		return;
+	}	
+	
 	NSLog(@"Hello world");
 }
 
