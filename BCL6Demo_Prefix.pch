@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'BCL6Demo' target in the 'BCL6Demo' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
