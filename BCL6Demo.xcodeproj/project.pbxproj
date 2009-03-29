@@ -45,8 +45,6 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
-				C6229B530F7F5AF2002A07E6 /* BCL6Demo.h */,
-				C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */,
 			);
 			name = BCL6Demo;
 			sourceTree = "<group>";
@@ -72,6 +70,8 @@
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C6229B530F7F5AF2002A07E6 /* BCL6Demo.h */,
+				C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";

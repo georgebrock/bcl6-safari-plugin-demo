@@ -11,4 +11,9 @@
 
 @implementation BCL6Demo
 
++(void)load
+{
+	NSLog(@"Hello world");
+}
+
 @end
