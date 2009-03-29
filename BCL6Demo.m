@@ -23,13 +23,20 @@
 	// Check this version of Safari is supported
 	NSDictionary *infoDict = [hostApp infoDictionary];
 	float v = [[infoDict valueForKey:@"CFBundleVersion"] floatValue];
-	if(v != 5528.16)
+	if(v - 5528.16 > 0.009 || v - 5528.16 < -0.009) // Work around silly rounding errors
 	{
 		//TODO: Tell the user why the plugin hasn't loaded (this version of Safari isn't supported)
 		return;
 	}	
 	
-	NSLog(@"Hello world");
+	// Display the Hello World dialog
+	NSAlert *greeting = [NSAlert alertWithMessageText:@"Hello World" 
+										defaultButton:nil 
+									  alternateButton:nil
+										  otherButton:nil
+							informativeTextWithFormat:@"This message is brought to you by Barcamp London"];
+	
+	[greeting runModal];
 }
 
 @end
