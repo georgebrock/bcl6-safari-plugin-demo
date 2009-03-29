@@ -3,7 +3,8 @@
 //  BCL6Demo
 //
 //  Created by George on 29/03/2009.
-//  Copyright 2009 George Brocklehurst. All rights reserved.
+//  Copyright 2009 George Brocklehurst.
+//  Creative Commons, see the accompanying LICENSE file for details.
 //
 
 #import <objc/objc-class.h>
