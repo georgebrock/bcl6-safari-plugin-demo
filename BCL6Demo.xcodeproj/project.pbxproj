@@ -10,6 +10,7 @@
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		C6229B550F7F5AF2002A07E6 /* BCL6Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */; };
+		C6229B630F7F5BF7002A07E6 /* Info in Resources */ = {isa = PBXBuildFile; fileRef = C6229B620F7F5BF7002A07E6 /* Info */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6229B530F7F5AF2002A07E6 /* BCL6Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCL6Demo.h; sourceTree = "<group>"; };
 		C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCL6Demo.m; sourceTree = "<group>"; };
+		C6229B620F7F5BF7002A07E6 /* Info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Info; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -40,6 +42,7 @@
 		089C166AFE841209C02AAC07 /* BCL6Demo */ = {
 			isa = PBXGroup;
 			children = (
+				C6229B620F7F5BF7002A07E6 /* Info */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				C6229B630F7F5BF7002A07E6 /* Info in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
