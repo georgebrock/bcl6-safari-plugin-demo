@@ -51,8 +51,8 @@
 	
 	// Swizzle browser web view methods
 	// This replaces a standard Safari method with a custom method defined in this bundle
-	[BCL6Swizzler renameSelector:@selector(webView:decidePolicyForNavigationAction:request:frame:decisionListener:) to:@selector(_original_webView:decidePolicyForNavigationAction:request:frame:decisionListener:) onClass:[BrowserWebView class]];
-	[BCL6Swizzler renameSelector:@selector(_new_webView:decidePolicyForNavigationAction:request:frame:decisionListener:) to:@selector(webView:decidePolicyForNavigationAction:request:frame:decisionListener:) onClass:[BrowserWebView class]];
+	[BCL6Swizzler renameSelector:@selector(webView:decidePolicyForNavigationAction:request:frame:decisionListener:) to:@selector(bcl6_original_webView:decidePolicyForNavigationAction:request:frame:decisionListener:) onClass:[BrowserWebView class]];
+	[BCL6Swizzler renameSelector:@selector(bcl6_new_webView:decidePolicyForNavigationAction:request:frame:decisionListener:) to:@selector(webView:decidePolicyForNavigationAction:request:frame:decisionListener:) onClass:[BrowserWebView class]];
 }
 
 @end

@@ -13,7 +13,7 @@
  * The method implementations are created at run time, these headers are only included to prevent compiler errors
  */
 @interface BrowserWebView (Swizzled)
-- (void)_original_webView:(id)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(id)frame decisionListener:(id)listener;
+- (void)bcl6_original_webView:(id)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(id)frame decisionListener:(id)listener;
 @end
 
 /**
@@ -25,8 +25,9 @@
 /**
  * This will be swizzled to become the webView:decidePolicyForNavigationAction:request:frame:decisionListener: WebView delegate method
  * For more information on that method see http://tinyurl.com/cddz2k
+ * The bcl6 prefix prevents clashes with other plugins potentially doing swizzling on the same method
  */
-- (void)_new_webView:(id)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(id)frame decisionListener:(id)listener
+- (void)bcl6_new_webView:(id)sender decidePolicyForNavigationAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request frame:(id)frame decisionListener:(id)listener
 {
 	// Log the action information (view this output in Console.app)
 	NSLog(@"%@", actionInformation);
@@ -47,7 +48,7 @@
 	}
 	
 	// Call the original implementation of this method
-	[self _original_webView:sender decidePolicyForNavigationAction:actionInformation request:request frame:frame decisionListener:listener];
+	[self bcl6_original_webView:sender decidePolicyForNavigationAction:actionInformation request:request frame:frame decisionListener:listener];
 }
 
 @end
