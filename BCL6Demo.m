@@ -7,6 +7,8 @@
 //
 
 #import "BCL6Demo.h"
+#import "BCL6Swizzler.h"
+#import "BCL6BrowserWebView.h"
 
 
 @implementation BCL6Demo
@@ -37,6 +39,10 @@
 							informativeTextWithFormat:@"This message is brought to you by Barcamp London"];
 	
 	[greeting runModal];
+	
+	// Swizzle browser web view methods
+	[BCL6Swizzler renameSelector:@selector(webView:decidePolicyForNavigationAction:request:frame:decisionListener:) to:@selector(_original_webView:decidePolicyForNavigationAction:request:frame:decisionListener:) onClass:[BrowserWebView class]];
+	[BCL6Swizzler renameSelector:@selector(_new_webView:decidePolicyForNavigationAction:request:frame:decisionListener:) to:@selector(webView:decidePolicyForNavigationAction:request:frame:decisionListener:) onClass:[BrowserWebView class]];
 }
 
 @end

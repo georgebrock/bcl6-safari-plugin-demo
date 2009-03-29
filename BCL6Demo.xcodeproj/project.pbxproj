@@ -11,6 +11,8 @@
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		C6229B550F7F5AF2002A07E6 /* BCL6Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */; };
 		C6229B630F7F5BF7002A07E6 /* Info in Resources */ = {isa = PBXBuildFile; fileRef = C6229B620F7F5BF7002A07E6 /* Info */; };
+		C6229BA40F7F668B002A07E6 /* BCL6BrowserWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6229BA30F7F668B002A07E6 /* BCL6BrowserWebView.m */; };
+		C6229BC80F7F6981002A07E6 /* BCL6Swizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = C6229BC70F7F6981002A07E6 /* BCL6Swizzler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		C6229B530F7F5AF2002A07E6 /* BCL6Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCL6Demo.h; sourceTree = "<group>"; };
 		C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCL6Demo.m; sourceTree = "<group>"; };
 		C6229B620F7F5BF7002A07E6 /* Info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Info; sourceTree = "<group>"; };
+		C6229BA20F7F668B002A07E6 /* BCL6BrowserWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCL6BrowserWebView.h; sourceTree = "<group>"; };
+		C6229BA30F7F668B002A07E6 /* BCL6BrowserWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCL6BrowserWebView.m; sourceTree = "<group>"; };
+		C6229BC60F7F6981002A07E6 /* BCL6Swizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCL6Swizzler.h; sourceTree = "<group>"; };
+		C6229BC70F7F6981002A07E6 /* BCL6Swizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCL6Swizzler.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +81,10 @@
 			children = (
 				C6229B530F7F5AF2002A07E6 /* BCL6Demo.h */,
 				C6229B540F7F5AF2002A07E6 /* BCL6Demo.m */,
+				C6229BA20F7F668B002A07E6 /* BCL6BrowserWebView.h */,
+				C6229BA30F7F668B002A07E6 /* BCL6BrowserWebView.m */,
+				C6229BC60F7F6981002A07E6 /* BCL6Swizzler.h */,
+				C6229BC70F7F6981002A07E6 /* BCL6Swizzler.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -169,6 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6229B550F7F5AF2002A07E6 /* BCL6Demo.m in Sources */,
+				C6229BA40F7F668B002A07E6 /* BCL6BrowserWebView.m in Sources */,
+				C6229BC80F7F6981002A07E6 /* BCL6Swizzler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +211,10 @@
 				GCC_PREFIX_HEADER = BCL6Demo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				PRODUCT_NAME = BCL6Demo;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -214,6 +230,10 @@
 				GCC_PREFIX_HEADER = BCL6Demo_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
 				PRODUCT_NAME = BCL6Demo;
 				WRAPPER_EXTENSION = bundle;
 			};
